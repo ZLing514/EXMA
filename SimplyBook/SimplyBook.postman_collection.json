@@ -1,0 +1,220 @@
+{
+	"info": {
+		"_postman_id": "8704927f-d8f8-430b-a10d-84ac1576481e",
+		"name": "SimplyBook",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://user-api-v2.simplybook.me/admin/auth",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"company\": \"exma2\",\n  \"login\": \"admin\",\n  \"password\": \"exma1234\"\n}"
+				},
+				"url": {
+					"raw": "https://user-api-v2.simplybook.me/admin/auth",
+					"protocol": "https",
+					"host": [
+						"user-api-v2",
+						"simplybook",
+						"me"
+					],
+					"path": [
+						"admin",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get service",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "X-Company-Login",
+						"value": "exma2",
+						"type": "default"
+					},
+					{
+						"key": "X-Token",
+						"value": "ed5978e7bf8e4d5ee3a256c9fc5e755e27728aaefef189cba7546a92944a6ae1",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://user-api-v2.simplybook.me/admin/services/1",
+					"protocol": "https",
+					"host": [
+						"user-api-v2",
+						"simplybook",
+						"me"
+					],
+					"path": [
+						"admin",
+						"services",
+						"1"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get provider",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "X-Company-Login",
+						"value": "exma2",
+						"type": "default"
+					},
+					{
+						"key": "X-Token",
+						"value": "ed5978e7bf8e4d5ee3a256c9fc5e755e27728aaefef189cba7546a92944a6ae1",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://user-api-v2.simplybook.me/admin/providers/1",
+					"protocol": "https",
+					"host": [
+						"user-api-v2",
+						"simplybook",
+						"me"
+					],
+					"path": [
+						"admin",
+						"providers",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get available slots",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "X-Company-Login",
+						"value": "exma2",
+						"type": "default"
+					},
+					{
+						"key": "X-Token",
+						"value": "ed5978e7bf8e4d5ee3a256c9fc5e755e27728aaefef189cba7546a92944a6ae1",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://user-api-v2.simplybook.me/admin/schedule/available-slots?date=2020-08-27&provider_id=1&service_id=5",
+					"protocol": "https",
+					"host": [
+						"user-api-v2",
+						"simplybook",
+						"me"
+					],
+					"path": [
+						"admin",
+						"schedule",
+						"available-slots"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "2020-08-27"
+						},
+						{
+							"key": "provider_id",
+							"value": "1"
+						},
+						{
+							"key": "service_id",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get booking details",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "X-Company-Login",
+						"value": "exma2",
+						"type": "default"
+					},
+					{
+						"key": "X-Token",
+						"value": "ed5978e7bf8e4d5ee3a256c9fc5e755e27728aaefef189cba7546a92944a6ae1",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://user-api-v2.simplybook.me/admin/bookings/1",
+					"protocol": "https",
+					"host": [
+						"user-api-v2",
+						"simplybook",
+						"me"
+					],
+					"path": [
+						"admin",
+						"bookings",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
